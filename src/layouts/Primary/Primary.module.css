@@ -1,0 +1,9 @@
+.primaryLayout {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.wrapper-layout {
+    margin-left: var(--sidebar-width);
+    width: 100%;
+}
