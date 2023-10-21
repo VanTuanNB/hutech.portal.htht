@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 :root {
-    --sidebar-width: 14vw;
+    --sidebar-width: 0vw;
     --header-height: 60px;
 }
 html {

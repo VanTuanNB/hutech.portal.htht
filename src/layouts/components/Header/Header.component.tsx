@@ -2,7 +2,9 @@ import classNames from 'classnames/bind';
 import { ReactElement, useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import { IHeaderProps } from './interfaces/header.interface';
-
+import MenuFoldOutlined from '@ant-design/icons/lib/icons/MenuFoldOutlined';
+import Avatar from 'antd/es/avatar/avatar';
+import UserOutlined from '@ant-design/icons/lib/icons/UserOutlined';
 const cx = classNames.bind(styles);
 
 export default function HeaderComponent(props: IHeaderProps): ReactElement {
@@ -10,7 +12,7 @@ export default function HeaderComponent(props: IHeaderProps): ReactElement {
         window.getComputedStyle(document.documentElement).getPropertyValue('--sidebar-width'),
     );
     const handleResizeSidebar = (e: any) => {
-        setWidthSidebar(widthSidebar === '14vw' ? '20vw' : '14vw');
+        setWidthSidebar(widthSidebar === '16vw' ? '0vw' : '16vw');
     };
 
     useEffect(() => {
@@ -20,11 +22,13 @@ export default function HeaderComponent(props: IHeaderProps): ReactElement {
     return (
         <header className={cx('header')}>
             <div className={cx('header-left')}>
-                <button onClick={handleResizeSidebar} style={{ cursor: 'pointer' }}>
-                    Toggle sidebar
-                </button>
+            <button onClick={handleResizeSidebar} style={{ cursor: 'pointer', padding: '10px'}}> 
+                <MenuFoldOutlined />
+             </button>
             </div>
-            <div className={cx('header-right')}></div>
+            <div className={cx('header-right')} style={{float: 'right'}}>
+                <Avatar size="small" icon={<UserOutlined />} />
+            </div>
         </header>
     );
 }
