@@ -5,4 +5,8 @@ export const STATISTICAL_URl: IConfigService = {
         path: '/statistical/search',
         method: 'GET',
     },
+    GET_BY_ID: {
+        path: '/statistical/search', // slug
+        method: 'GET',
+    },
 };
