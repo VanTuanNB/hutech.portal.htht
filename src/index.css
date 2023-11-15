@@ -7,10 +7,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root {
-    --sidebar-width: 14vw;
-    --header-height: 60px;
-}
 html {
     font-size: 62.5%;
 }

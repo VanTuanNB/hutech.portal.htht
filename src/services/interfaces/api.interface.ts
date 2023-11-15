@@ -27,6 +27,7 @@ export interface IResponseServer<T> {
 export interface IRequestGetAllStatistics {
     page: number;
     size: number;
+    mode: string;
 }
 
 export interface IResponseGetAllStatistics {
