@@ -6,11 +6,15 @@ import classNames from 'classnames/bind';
 import { ReactElement, memo } from 'react';
 import styles from './Header.module.css';
 import { IHeaderProps } from './interfaces/header.interface';
+import { UserOutlined } from '@ant-design/icons';
+import React from 'react';
+import { AutoComplete, Avatar, Space } from 'antd';
 const cx = classNames.bind(styles);
 
 function HeaderComponent({ collapsed, bgColor, onToggleCollapsed }: IHeaderProps): ReactElement {
     return (
-        <Header style={{ padding: 0, background: bgColor }}>
+        
+        <Header className={cx('wrapper-header')} style={{ padding: 0, background: bgColor }}>
             <Button
                 type="text"
                 icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -21,7 +25,11 @@ function HeaderComponent({ collapsed, bgColor, onToggleCollapsed }: IHeaderProps
                     height: 64,
                 }}
             />
-            sjsdfjs
+            <Space className={cx('wrapper-header__user')} direction="vertical" size={16}>
+                <Space wrap size={16}>
+                <Avatar size="large" icon={<UserOutlined />} />
+                </Space>
+            </Space>
         </Header>
     );
 }

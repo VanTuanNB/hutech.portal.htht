@@ -1,0 +1,9 @@
+.wrapper-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-header__user {
+    padding-right: 16px;
+}

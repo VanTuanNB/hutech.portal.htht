@@ -55,17 +55,17 @@ function SidebarComponent({ collapsed }: { collapsed: boolean }) {
               {
                   key: '1',
                   icon: <UserOutlined />,
-                  label: 'nav 1',
+                  label: 'Ví tổng',
               },
               {
                   key: '2',
                   icon: <VideoCameraOutlined />,
-                  label: 'nav 2',
+                  label: 'Biểu đồ',
               },
               {
                   key: '3',
                   icon: <UploadOutlined />,
-                  label: 'nav 3',
+                  label: 'Khác',
               },
           ]}
       />
